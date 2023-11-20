@@ -1,4 +1,7 @@
-CREATE DATABASE NEXUS;
+CREATE USER 'nexus_user'@'172.17.0.1' IDENTIFIED BY 'sptech';
+GRANT ALL PRIVILEGES ON . TO 'nexus_user'@'172.17.0.1' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 USE NEXUS;
 
 CREATE TABLE Endereco (
@@ -10,6 +13,7 @@ CREATE TABLE Endereco (
   uf CHAR(2) NOT NULL,
   complemento VARCHAR(45) NULL
 );
+
 -- Inserindo dados na tabela Endereco
 INSERT INTO Endereco (cep, logradouro, bairro, localidade, uf, complemento)
 VALUES

@@ -30,7 +30,7 @@ sleep 15
 
 # Criar e executar o container MySQL com o script SQL
 echo -e "${PURPLE}[${EMPRESA}]:${NC} Criando e executando o container MySQL..."
-sudo docker run -d -p 3306:3306 --name NexusBank -e "MYSQL_ROOT_PASSWORD=nexus123" mysql:latest
+sudo docker run -d -p 3306:3306 --name NexusBank -e "MYSQL_DATABASE=NEXUS" -e "MYSQL_ROOT_PASSWORD=nexus123" mysql:latest
 sudo update -y 
 echo -e "${PURPLE}[${EMPRESA}]:${NC} Container MySQL criado e em execução!"
 
