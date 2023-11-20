@@ -35,6 +35,7 @@ installJavaNexus() {
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Ok! Você decidiu instalar o Java na máquina, uhul!"
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Adicionando o repositório!"
         sudo add-apt-repository ppa:linuxuprising/java
+        sudo apt install wget -y
         sudo apt update -y
         clear
 
@@ -49,7 +50,7 @@ installJavaNexus() {
             clear
 
             echo -e "${PURPLE}[${EMPRESA}]:${NC} Baixando o arquivo JAR..."
-            wget https://github.com/Nexus-Enterprises/login-Java/raw/main/Nexus/target/Nexus-1.0-jar-with-dependencies.jar
+            wget https://github.com/trajanomarcos/jar-individual/raw/main/Nexus/target/Nexus-1.0-jar-with-dependencies.jar
             if [ $? -eq 0 ]; then
                 echo -e "${PURPLE}[${EMPRESA}]:${NC} Arquivo JAR baixado com sucesso!"
                 echo -e "${PURPLE}[${EMPRESA}]:${NC} Agora vamos executar o arquivo JAR..."
