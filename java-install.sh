@@ -51,7 +51,7 @@ installJavaNexus() {
 
     # Verificando se a nossa aplicacao ja esta instalada!
 
-    if [ ! -f "$jar_nome" ]; then
+    if [ ! -f "$jar_nome" ]; then
         sudo apt install wget -y
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Baixando o arquivo JAR..."
             sudo wget "$jar_url" -O "$jar_nome"
