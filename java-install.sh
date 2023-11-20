@@ -67,7 +67,7 @@ installJavaNexus() {
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Executando o arquivo!"
     fi
 
-    java -jar "$java_url" 
+    java -jar "$java_nome" 
 }
 
 # Main script - functions
