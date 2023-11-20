@@ -3,7 +3,7 @@ FROM mysql:latest
 
 # defina variáveis de ambiente para a senha do rrot do MySQL
 ENV MYSQL_USER=nexus_user
-ENV MYSQL_ROOT_PASSWORD=sptech
+ENV MYSQL_ROOT_PASSWORD=nexus123
 ENV MYSQL_DATABASE=NEXUS
 
 # Copie o script de inicialização para o diretório de inicialização do MySQL
