@@ -55,20 +55,19 @@ installJavaNexus() {
     if [ ! -f "$jar_nome" ]; then
         sudo apt install wget -y
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Baixando o arquivo JAR..."
-            sudo wget "$jar_url" -O "$jar_nome"
-            if [ $? -eq 0 ]; then
-                echo -e "${PURPLE}[${EMPRESA}]:${NC} Arquivo JAR baixado com sucesso!"
-                echo -e "${PURPLE}[${EMPRESA}]:${NC} Agora vamos executar o arquivo JAR..."
-                java -jar "$java_url" 
-            else
-                echo -e "${PURPLE}[${EMPRESA}]:${NC} Erro ao baixar o arquivo JAR do GitHub"
-            fi
+        sudo wget "$jar_url" -O "$jar_nome"
+        if [ $? -eq 0 ]; then
+            echo -e "${PURPLE}[${EMPRESA}]:${NC} Arquivo JAR baixado com sucesso!"
+            echo -e "${PURPLE}[${EMPRESA}]:${NC} Agora vamos executar o arquivo JAR..."
+            java -jar "$jar_nome"
+        else
+            echo -e "${PURPLE}[${EMPRESA}]:${NC} Erro ao baixar o arquivo JAR do GitHub"
+        fi
     else
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Arquivo ja instalado!"
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Executando o arquivo!"
+        java -jar "$jar_nome"
     fi
-
-    java -jar "$java_nome" 
 }
 
 # Main script - functions
