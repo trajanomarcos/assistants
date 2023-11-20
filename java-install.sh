@@ -62,10 +62,11 @@ installJavaNexus() {
             else
                 echo -e "${PURPLE}[${EMPRESA}]:${NC} Erro ao baixar o arquivo JAR do GitHub"
             fi
-    else 
+    else
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Arquivo ja instalado!"
         echo -e "${PURPLE}[${EMPRESA}]:${NC} Executando o arquivo!"
     fi
+
     java -jar "$java_url" 
 }
 
